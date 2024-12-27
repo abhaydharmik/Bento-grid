@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --p100: hsl(254, 88%, 90%);
+    --p500: hsl(256, 67%, 59%);
+
+    --y100: hsl(31, 66%, 93%);
+    --y500: hsl(39, 100%, 71%);
+
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 7%);
+
+    --font-size: 18px;
+}
+
+body {
+    background-color: #efeaea;
+    letter-spacing: -1.50px;
+    line-height: 0.9;
+    font-family: 'DM Sans', sans-serif;
+    padding: 1.4rem;
+}
+
+main {
+    display: block;
+    justify-content: center;
+    padding: 0.5rem 2rem;
+}
+
+.grid {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.purple {
+    color: var(--p500);
+}
+
+.yellow {
+    color: var(--y500);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 13rem 13rem 13rem;
+    grid-template-areas: 'column1 column2 column3'
+        'column1 column2 column3'
+        'column1 column4 column4'
+    ;
+    max-width: 60rem;
+    max-height: 100%;
+    margin-inline: auto;
+    gap: 1rem;
+}
+
+
+.create {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--y100);
+
+    h2 {
+        font-size: 1.8rem;
+        font-weight: 485;
+        margin: 1rem 0 0 0rem;
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    img {
+        padding: 0rem 0 0 1rem;
+        text-align: center;
+        width: 150px;
+        margin: 0 0rem 3 .5rem 0;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--y500);
+
+    h2 {
+        margin: 0 2rem 0 0.5rem;
+        padding: 0 1.1rem 1.1rem 0;
+        font-size: 2rem;
+        font-weight: 485;
+        text-align: left;
+    }
+
+    img {
+        position: relative;
+        top: 1.7rem;
+        left: 0.2rem;
+        width: 200px;
+    }
+}
+
+.media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    background-color: var(--p500);
+    gap: 0.2rem;
+
+    h2 {
+        font-size: 2.7rem;
+        font-weight: 450;
+        letter-spacing: 0.5px !important;
+        margin: 1.2rem 0.5rem 0.2rem 0.5rem;
+        text-align: center;
+    }
+
+    img {
+        text-align: center;
+        margin: .5rem 0 0 0;
+        padding: 0.2rem .5rem .4rem .5rem;
+        max-width: 180px;
+    }
+
+    p {
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+}
+
+.manage {
+    overflow: hidden;
+    background-color: var(--white);
+
+    img {
+        width: 275px;
+    }
+
+    p {
+        margin: 1.5rem 0 0 0;
+        padding: 0 1rem 0 0;
+        text-align: left;
+        font-size: 1.7rem;
+        font-weight: 495;
+    }
+}
+
+.posting {
+    height: 219.48px;
+    overflow: hidden;
+    background-color: var(--y500);
+
+    p {
+        font-size: 1.7rem;
+        font-weight: 495;
+    }
+
+    img {
+        object-fit: cover;
+        max-width: 180px;
+        margin: 1.5rem 0 0 0;
+    }
+}
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--p100);
+    overflow: hidden;
+
+    h2 {
+        font-size: 1.4rem;
+        font-weight: 495;
+        margin: 1.2rem 1.8rem 1rem 1.3rem;
+    }
+
+    img {
+        position:relative;
+        left: 3.33rem;
+        object-fit: cover;
+        width: 270px;
+    }
+
+    p {
+        font-size: 1rem;
+        letter-spacing: 0;
+        margin: 1rem 0rem 1rem 1.4rem;
+    }
+
+}
+
+.audience {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-evenly;
+    background-color: var(--white);
+
+    h2 {
+        font-size: 2.7rem;
+        font-weight: 500;
+    }
+
+    span {
+        letter-spacing: 0;
+        margin: 1rem 0 1.2rem 0;
+    }
+
+    img {
+        width: 160px;
+    }
+}
+
+.followers {
+    display: flex;
+    background-color: var(--p500);
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 200px;
+    }
+
+    p {
+        font-weight: 495;
+        color: var(--white);
+        font-size: 2.2rem;
+        margin: 0 0.8rem;
+    }
+}
+
+.container>*,
+.inside-element {
+    display: grid;
+    gap: 1rem;
+}
+
+.column1 {
+    grid-area: column1;
+}
+
+.column2 {
+    grid-area: column2;
+}
+
+.column3 {
+    grid-area: column3;
+}
+
+.column4 {
+    grid-area: column4;
+}
+
+.inside-element {
+    grid-template-columns: 1fr 1fr;
+}
+
+.inside-element:nth-child(1) {
+    grid-template-columns: .95fr 2fr;
+}
+
+
+@media screen and (max-width: 950px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 13rem 13rem 13rem 13rem;
+        grid-template-areas: 'column2 column3'
+            'column2 column3'
+            'column4 column4'
+            'column1 column1';
+    }
+
+    .column1 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .schedule {
+
+        img {
+            position: static;
+        }
+
+        p {
+            text-align: center;
+            margin: 1rem;
+        }
+    }
+
+    .manage {
+        p{
+            font-size: 1.6rem;  
+        } 
+    }
+
+    .posting {
+        img {
+            max-width: 160px;
+        }
+    }
+
+    .content {
+        img {
+            position: static;
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 650px) {
+    main {
+        display: block;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 'column2'
+            'column3'
+            'column4'
+            'column1';
+        max-width: 400px;
+    }
+
+    .column1 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .inside-element,
+    .inside-element:nth-child(1),
+    .column1 {
+        grid-template-columns: 1fr;
+    }
+
+    .media {
+        h2 {
+            font-size: 2.6rem;
+            padding: 0.5rem;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        p {
+            margin: 0 0 1rem 0;
+        }
+    }
+
+    .manage {
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    .posting {
+        p {
+            font-size: 1.5rem;
+        }
+
+        img {
+            max-width: 200px;
+        }
+    }
+
+    .schedule {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            font-size: 1.6rem;
+            margin: 0.5rem;
+        }
+
+        img {
+            position: static;
+            padding: 0.5rem;
+            width: 310px;
+        }
+
+        p {
+            text-align: center;
+            margin: 1rem 1.7rem;
+        }
+    }
+
+    .create {
+
+        img {
+            width: 185px;
+            margin: 0 0 1rem 0;
+        }
+    }
+
+    .content {
+        text-align: left;
+
+        h2 {
+            margin: 0;
+        }
+
+        img {
+            position: static;
+        }
+
+    }
+
+
+    .followers {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        p {
+            font-size: 1.8rem;
+            margin: 1.9rem 2.6rem 0.5rem 2.6rem;
+        }
+    }
+
+    .audience {
+        order: 2;
+    }
+}
